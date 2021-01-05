@@ -1,0 +1,13 @@
+{
+  "title": "echvzb blog",
+  "siteUrl": "https://blog.echvzb.me",
+  "description": "Contenido con fines educativos de las ciencias de la computación. Blog personal de Eduardo Chávez Barreto. Desarrollador de software. Artículos y opiniones.\n",
+  "home": {
+    "title": "¡Hola!, soy Eduardo Chávez",
+    "description": "Bienvenido a mi espacio literario dedicado a la computación. Contenido con fines educativos de las ciencias de la computación. Artículos y opiniones."
+  },
+  "twitterUsername": "@echvzb",
+  "author": "Eduardo Chávez",
+  "image": "/assets/index.png",
+  "imageAuthor": "/assets/author.jpg"
+}
