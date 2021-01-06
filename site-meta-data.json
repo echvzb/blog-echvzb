@@ -1,13 +1,17 @@
 {
   "title": "echvzb blog",
   "siteUrl": "https://blog.echvzb.me",
-  "description": "Contenido con fines educativos de las ciencias de la computación. Blog personal de Eduardo Chávez Barreto. Desarrollador de software. Artículos y opiniones.\n",
+  "description": "Personal blog of Eduardo Chavez. Content for educational purposes in Computer Science and Neuroscience. Articles and opinions based on my interpretation and my analysis.\n",
   "home": {
-    "title": "¡Hola!, soy Eduardo Chávez",
-    "description": "Bienvenido a mi espacio literario dedicado a la computación. Contenido con fines educativos de las ciencias de la computación. Artículos y opiniones."
+    "title": "Hey there!, I'm Eduardo Chavez",
+    "description": "Welcome to my literary space dedicated to computing. Content for educational purposes in Computer Science and Neuroscience. Articles and opinions based on my interpretation and my analysis."
   },
   "twitterUsername": "@echvzb",
-  "author": "Eduardo Chávez",
+  "author": "Eduardo Chavez",
   "image": "/assets/index.png",
-  "imageAuthor": "/assets/author.jpg"
+  "language": "en-US",
+  "personalWebsiteUrl": "https://echvzb.me/",
+  "fbAppId": "407901090404688",
+  "fbPage" : "https://www.facebook.com/echvzb.me",
+  "keywords": "Computer Science, Neuroscience"
 }
