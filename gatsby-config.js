@@ -43,7 +43,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Eduardo Chávez Blog oficial`,
+        name: `Eduardo Chavez Official Blog`,
         short_name: `echvzb`,
         start_url: `/`,
         background_color: `#fafafa`,
