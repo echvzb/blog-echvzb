@@ -2,12 +2,12 @@ import React from 'react';
 import  Helmet  from 'react-helmet';
 
 export default ({ frontmatter, siteMetadata}) => {
-    const title = frontmatter ? frontmatter.title + ' | echvzb blog' : siteMetadata.title; 
+    const title = frontmatter ? frontmatter.title + ' | ' + siteMetadata.title : siteMetadata.title; 
     const description = frontmatter ? frontmatter.metaDescription : siteMetadata.description;
     const img = siteMetadata.siteUrl + (frontmatter ? frontmatter.thumbnail.slice(0, frontmatter.thumbnail.length - 4) + '-seo.jpg' : siteMetadata.image);
     const url = siteMetadata.siteUrl + (frontmatter ? frontmatter.path : "");
     const author = siteMetadata.author;
-    const keywords = ['Ciencias de la computación', 'Informática','Blog', 'Tecnología', 'Programación', 'Desarrollo web', 'Inteligencia artificial', 'Javascript', 'HTML', 'React', 'Backend', 'Frontend', 'CSS', 'Python'];
+    const keywords = siteMetadata.keywords;
     
     return <Helmet
         title={title}
@@ -58,7 +58,7 @@ export default ({ frontmatter, siteMetadata}) => {
             },
             {
                 name:'keywords',
-                content: keywords.join(', ')
+                content: keywords
             }
         ]}
     />;
