@@ -11,16 +11,20 @@ const IndexPage = ({
     allMarkdownRemark: { edges },
   },
 }) => {
+  const { siteMetadata } = site,
+  lang = siteMetadata.language,
+  isEnUs = lang == 'en-US',
+  title = isEnUs ? 'Post ' : 'Publicaciones '; 
 
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+    .map(edge => <PostLink key={edge.node.id} post={edge.node} lang={lang} />)
 
   return (
     <Layout>
-      <SEO siteMetadata = {site.siteMetadata}/>
+      <SEO siteMetadata = {siteMetadata}/>
       <HeroHeader/>
-      <h2>Publicaciones &darr;</h2>
+      <h2>{title}&darr;</h2>
       <div className="grids">
         {Posts}
       </div>
@@ -38,6 +42,7 @@ export const pageQuery = graphql`
         author
         image
         siteUrl
+        language
       }
     }
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {

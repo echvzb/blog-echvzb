@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const PostLink = ({ post }) => (
+const PostLink = ({ post, lang }) => (
   <article className="card ">
     <Link to={post.frontmatter.path}>
       {!!post.frontmatter.thumbnail && (
@@ -14,7 +14,7 @@ const PostLink = ({ post }) => (
           {post.frontmatter.title}
         </Link>
       </h2>
-      <div className="post-meta">{new Date(post.frontmatter.date).toLocaleDateString("es-MX", { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+      <div className="post-meta">{new Date(post.frontmatter.date).toLocaleDateString({lang}, { year: 'numeric', month: 'long', day: 'numeric' })}</div>
     </header>
   </article>
 )

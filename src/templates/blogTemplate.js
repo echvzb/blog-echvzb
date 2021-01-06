@@ -11,10 +11,14 @@ export default function Template({
   const { site, markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   const url = site.siteMetadata.siteUrl + frontmatter.path;
+  const { siteMetadata } = site;
+  const lang = siteMetadata.language,
+    isEnUs = lang == 'en-US',
+    shareTxt = isEnUs ? 'Share' : 'Compartir';
 
   return (
     <Layout>
-      <SEO frontmatter={frontmatter} siteMetadata={site.siteMetadata} />
+      <SEO frontmatter={frontmatter} siteMetadata={siteMetadata} />
       {!frontmatter.thumbnail && (
         <div className="post-thumbnail">
           <h1 className="post-title">{frontmatter.title}</h1>
@@ -25,13 +29,13 @@ export default function Template({
         <div className="post-thumbnail" style={{ backgroundImage: `url(${frontmatter.thumbnail})` }}>
           <h1 className="post-title">{frontmatter.title}</h1>
           <div className='author'>
-            <img src='/assets/author.jpg' alt='Foto de perfil de Eduardo Chávez' />
-            <a href='https://echvzb.me/'>Eduardo Chávez</a>
+            <img src='/assets/author.jpg' alt={siteMetadata.author + ' picture.'} />
+            <a href={siteMetadata.personalWebsiteUrl}>{siteMetadata.author}</a>
           </div>
-          <div className="post-meta">{new Date(frontmatter.date).toLocaleDateString("es-MX", { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+          <div className="post-meta">{new Date(frontmatter.date).toLocaleDateString(siteMetadata.language, { year: 'numeric', month: 'long', day: 'numeric' })}</div>
         </div>
       )}
-      <ShareButtons url={url} />
+      <ShareButtons url={url} shareTxt={shareTxt}/>
       <div className="blog-post-container">
         <article className="post">
           <div
@@ -40,7 +44,7 @@ export default function Template({
           />
         </article>
       </div>
-      <FacebookComments url={url} />
+      <FacebookComments url={url} fbAppId={siteMetadata.fbAppId} fbPage={siteMetadata.fbPage} />
     </Layout>
   )
 }
@@ -54,6 +58,11 @@ export const pageQuery = graphql`
                             author
                             image
                             siteUrl
+                            language
+                            personalWebsiteUrl
+                            fbAppId
+                            fbPage
+                            keywords
                         }
     }
     markdownRemark(frontmatter: {path: {eq: $path } }) {
