@@ -2,48 +2,47 @@
 template: BlogPost
 path: /que-son-los-algoritmos-y-por-que-son-importantes
 date: 2020-11-29T21:23:09.631Z
-title: ¿Qué son los algoritmos y por qué son importantes?
+title: What are algorithms and why are they important?
 metaDescription: Hoy en día la cuestión digital va tomando terreno en relación
   al tiempo que no se detiene. Es por ello que la palabra algoritmo cada día se
   vuelve más frecuente de escuchar en la vida diaria de las personas, con una
   connotación tecnológica.
 thumbnail: /assets/que-son-los-algoritmos-y-por-que-son-importantes.jpg
 ---
-Hoy en día la cuestión digital va tomando terreno en relación al tiempo que no se detiene. Es por ello que la palabra algoritmo cada día se vuelve más frecuente de escuchar en la vida diaria de las personas, con una connotación tecnológica.
+Nowadays, digital things are taking land concerning the time that doesn't stop. For this reason, the word algorithm every day becomes more frequent in listening to it in the lives of everyday people.
 
-## Contenido.
+## Content.
 
-1. [¿Qué es un algoritmo?.](#definicion)
+1. [What is an algorithm?.](#definicion)
 
-* [La base: conocimiento descriptivo.](#base)
+* [The base: descriptive knowledge.](#base)
 
-* [Diferencias entre algoritmos: eficiencia.](#eficiencia)
+* [Algorithm differences: efficiency.](#eficiencia)
 
-* [Innovación tecnológica.](#innovacion)
+* [Technological innovation.](#innovacion)
 
-* [Referencias.](#ref)
+* [References.](#ref)
 
 <div id='definicion'></div>
 
-## ¿Qué es un algoritmo?
+## What is an algorithm?
 
-De modo informal lo definimos por simplicidad con un símil: "_Un algoritmo es como una receta_". Por ejemplo, **receta para hacer galletas de mantequilla**:
+Informally, we can define for simplicity with a comparison: "_ An algorithm is like a recipe_". For example, **recipe for making butter cookies**:
 
-1. Cernir 2 tazas harina de trigo en un recipiente contenedor para masa.
-2. Añadir 200 gr. de azúcar al recipiente.
-3. Añadir una cucharada de de vainilla al recipiente.
-4. Añadir una pizca de bicarbonato de sodio al recipiente.
-5. Añadir 250 gr. de mantequilla al recipiente.
-6. Revolver los ingredientes del recipiente hasta que se forme una masa.
-7. Cubrir el recipiente con un trozo de tela.
-8. Meter el recipiente a un refrigerador por 20 min.
+1. Sift 2 cups of wheat flour in a bowl.
+2. Add 200 grams of sugar to the bowl.
+3. Add a tablespoon of vanilla to the bowl.
+4. Add a pinch of sodium bicarbonate to the bowl.
+5. Add 250 grams of butter to the bowl.
+6. Mix the ingredients of the bowl until they form a mass.
+7. Cover the bowl with a piece of cloth.
+8. Put the bowl in the fridge for 20 minutes.
 
-Este es un ejemplo comprensible de un algoritmo.
+This is an understandable example of an algorithm.
 
-Como se puede observar, una receta o algoritmo es una serie de instrucciones que definen un proceso. Dicho proceso tiene como función realizar una tarea.
+As we can see, a recipe or algorithm is a set of instructions that define a process. The above-mentioned process has a function to accomplish a task.
 
-Las instrucciones de cada paso están descritas como: _cernir_, _añadir_, _revolver_, etc. Con las que, tienen de objeto ingredientes de cocina como: _azúcar_, _vainilla_, _harina de trigo_, etc.
-
+The instructions for each step are defined as: sift, add, mix, and so on. With which they have as object cooking ingredients such as sugar, vanilla, wheat flour, etc.
 
 No solo están presentes en recetas de cocina, están por todos lados. Un ejemplo claro son las rutinas diarias, como levantarse de la cama y tenderla, tomar un baño, hacer tarea, ir a trabajar, étc. Hacemos las cosas paso por paso con el fin de terminar tareas (la mayoría de las veces).
 
