@@ -1,13 +1,32 @@
 import React from "react"
 import Helmet from 'react-helmet';
 import Layout from "../components/layout"
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 
-const notFound = () => {
+export default () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            language
+          }
+        }
+      }
+    `
+  )
+  const lang = data.site.siteMetadata.language,
+      isEnUs = lang == 'en-US', 
+      title = isEnUs ? 'Page not found' : 'Página no encontrada',
+      description = isEnUs ? 'You are on a wrong page. For more post, visit ' : 'Estás en una página erronea. Para más publicaciones, visita ',
+      linkText = isEnUs ? 'Home' : 'Inicio';
+
+  console.log(data)
   return (
+    
     <Layout>
       <Helmet>
-        <title>Página no encontrada</title>
+        <title>{title}</title>
       </Helmet>
       <div style={{textAlign: "center", padding:"5vh 0", lineHeight: "1.5"}}>
         <svg
@@ -37,10 +56,8 @@ const notFound = () => {
             fill="currentColor"
           />
         </svg>
-        <p>Estás en una página incorrecta. Regresa a <Link to="/">inicio</Link> para más articulos.</p>
+        <p>{description}<Link to="/">{linkText}</Link>.</p>
       </div>
     </Layout>
   )
 }
-
-export default notFound

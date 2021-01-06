@@ -4,9 +4,9 @@ import { VKShareButton, TelegramShareButton, FacebookShareButton, TwitterShareBu
 const shareBtn = 'share-btn';
 
 
-export default ({ url }) =>
+export default ({ url, shareTxt }) =>
     <div className='share'>
-        <h2 className='share-txt'>Compartir</h2>
+        <h2 className='share-txt'>{shareTxt}</h2>
         <div className='share-btns'>
             <FacebookShareButton
                 url={url}
