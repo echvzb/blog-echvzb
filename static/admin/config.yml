@@ -55,7 +55,7 @@ collections:
             options:
               - {label: English, value: "en-US"}
               - {label: Español, value: "es-MX"}
-  - name: author
+  - name: authors
     label: Author
     folder: _data/authors
     create: true
@@ -83,6 +83,12 @@ collections:
           widget: hidden,
           default: BlogPost,
         }
+      - widget: relation
+        name: author
+        label: Author
+        collection: authors
+        value_field: authorName
+        search_fields: [authorName, personalWebsite, twitterUsername, profilePicture]
       - name: path
         label: Path
         widget: string
