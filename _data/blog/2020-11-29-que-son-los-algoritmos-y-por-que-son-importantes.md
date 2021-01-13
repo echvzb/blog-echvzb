@@ -1,6 +1,6 @@
 ---
 template: BlogPost
-path: /algorithms/algorithms-what-are-they
+path: /algorithms/what-are-they
 date: 2020-11-29T21:23:09.631Z
 title: "Algorithms: what are they?"
 metaDescription: Nowadays, digital things are taking land concerning the time
