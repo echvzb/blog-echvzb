@@ -1,17 +1,18 @@
 {
-  "title": "echvzb blog",
+  "fbAppId": "407901090404688",
   "siteUrl": "https://blog.echvzb.me",
+  "twitterUsername": "@echvzb",
+  "keywords": "Computer Science, Neuroscience",
+  "fbPage": "https://www.facebook.com/echvzb.me",
+  "author": "Eduardo Chavez",
+  "personalWebsiteUrl": "https://echvzb.me/",
+  "title": "echvzb blog",
+  "language": "en-US",
+  "Language": "en-US",
+  "image": "/assets/index.png",
   "description": "Personal blog of Eduardo Chavez. Content for educational purposes in Computer Science and Neuroscience. Articles and opinions based on my interpretation and my analysis.\n",
   "home": {
     "title": "Hey there!, I'm Eduardo Chavez",
     "description": "Welcome to my literary space dedicated to computing. Content for educational purposes in Computer Science and Neuroscience. Articles and opinions based on my interpretation and my analysis."
-  },
-  "twitterUsername": "@echvzb",
-  "author": "Eduardo Chavez",
-  "image": "/assets/index.png",
-  "language": "en-US",
-  "personalWebsiteUrl": "https://echvzb.me/",
-  "fbAppId": "407901090404688",
-  "fbPage" : "https://www.facebook.com/echvzb.me",
-  "keywords": "Computer Science, Neuroscience"
+  }
 }
