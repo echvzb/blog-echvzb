@@ -45,15 +45,15 @@ The instructions for each step are defined as: sift, add, mix, and so on. With w
 
 They're not just about cooking recipes, they're everywhere. A clear example is the daily routines such as getting up, making bed, taking a shower, doing homework, going to work, and so on. We do things step by step in order to accomplish tasks (most of the time).
 
-Dicho lo anterior, los algoritmos enfáticamente forman parte de la tecnología, ya que, en esencia son una técnica para realizar una tarea y eso es tecnología. Es tiempo de analizar el objeto algoritmo con lo que hoy en día hace mucho ruido, la computación.
+Said the above, algorithms emphatically belong to technology, since they are essentially a technique for performing a task, and that's technology. It's time to analyze the object algorithm with what makes an amount of noise today, computer science. 
 
 <div id='base'></div>
 
-## La base: conocimiento descriptivo.
+## The base: descriptive knowledge.
 
-Las instrucciones de los algoritmos son realizadas por computadoras. La pregunta es ¿cómo?, la respuesta se encuentra en **el conocimiento descriptivo**.
+The algorithm instructions are executed by computers. The question here is how?, the answer is in **the descriptive knowledge**.
 
-Las computadoras no son capaces de inferir (aún) a diferencia de los seres humanos. Únicamente son capaces de hacer exactamente lo que se ordena.
+Computers aren't able to infer (still), unlike humans. They can only do exactly what they have instructed.
 
 Existen dos tipos de conocimiento: 
 
