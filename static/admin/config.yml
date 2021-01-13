@@ -71,6 +71,14 @@ collections:
         media_library:
           config:
             multiple: false
+  - name: series
+    label: Serie
+    folder: _data/series
+    create: true
+    slug: '{{serieName}}'
+    fields:
+      - { name: serieName, label: Serie name, widget: string, required: true }
+      - { name: description, label: Description, widget: text }
   - name: blog
     label: Blog
     folder: _data/blog
@@ -87,8 +95,8 @@ collections:
         name: author
         label: Author
         collection: authors
-        value_field: authorName
-        search_fields: [authorName, personalWebsite, twitterUsername, profilePicture]
+        value_field: *
+        search_fields: [authorName]
       - name: path
         label: Path
         widget: string
