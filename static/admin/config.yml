@@ -53,13 +53,15 @@ collections:
             options:
               - {label: English, value: "en-US"}
               - {label: Español, value: "es-MX"}
-  - name: authors
-    label: Authors
+  - name: author
+    label: Author
     folder: _data/authors
     create: true
+    slug: '{{authorName}}'
     fields:
       - { name: authorName, label: Author name, widget: string, required: true}
       - { name: personalWebsite, label: Personal website, widget: string, required: true }
+      - { name: twitterUsername, hint: Start with @, label: Twitter username, widget: string, required: true }
       - name: profilePicture
         label: Profile picture 
         widget: image 
