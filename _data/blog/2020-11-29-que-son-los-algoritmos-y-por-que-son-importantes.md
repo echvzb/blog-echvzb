@@ -27,7 +27,7 @@ Nowadays, digital things are taking land concerning the time that doesn't stop. 
 
 ## What is an algorithm?
 
-Informally, we can define for simplicity with a comparison: "_ An algorithm is like a recipe_". For example, **recipe for making butter cookies**:
+Informally, we can define for simplicity with a comparison: __"An algorithm is like a recipe"__. For example, **recipe for making butter cookies**:
 
 1. Sift 2 cups of wheat flour in a bowl.
 2. Add 200 grams of sugar to the bowl.
