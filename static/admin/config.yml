@@ -41,6 +41,32 @@ collections:
                 label: Description
                 default: ''
                 required: false
+          - widget: string
+            name: fbAppId
+            label: Facebook App ID
+            required: true
+          - widget: string
+            name: fbPage
+            label: Facebook Page
+          - widget: select
+            name: Language
+            options:
+              - {label: English, value: "en-US"}
+              - {label: Español, value: "es-MX"}
+  - name: authors
+    label: Authors
+    folder: _data/authors
+    create: true
+    fields:
+      - { name: authorName, label: Author name, widget: string, required: true}
+      - { name: personalWebsite, label: Personal website, widget: string, required: true }
+      - name: profilePicture
+        label: Profile picture 
+        widget: image 
+        required: true
+        media_library:
+          config:
+            multiple: false
   - name: blog
     label: Blog
     folder: _data/blog
@@ -63,13 +89,14 @@ collections:
       - label: Meta Description
         name: metaDescription
         widget: text
-        required: false
+        required: true
       - label: Featured Image
         name: thumbnail
         widget: image
-        hint: "Image size 1280x800 works best :)"
-        required: false
+        hint: "Image size 1280x800"
+        required: true
         media_library:
           config:
             multiple: false
       - { name: body, label: Body, widget: markdown }
+    
