@@ -1,5 +1,6 @@
 ---
 template: BlogPost
+author: Eduardo Chavez
 path: /algorithms/what-are-they
 date: 2020-11-29T21:23:09.631Z
 title: "Algorithms: what are they?"
