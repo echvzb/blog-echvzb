@@ -1,13 +1,12 @@
 ---
 template: BlogPost
-path: /que-son-los-algoritmos-y-por-que-son-importantes
+path: /algorithms/algorithms-what-are-they
 date: 2020-11-29T21:23:09.631Z
-title: What are algorithms and why are they important?
-metaDescription: Hoy en día la cuestión digital va tomando terreno en relación
-  al tiempo que no se detiene. Es por ello que la palabra algoritmo cada día se
-  vuelve más frecuente de escuchar en la vida diaria de las personas, con una
-  connotación tecnológica.
-thumbnail: /assets/que-son-los-algoritmos-y-por-que-son-importantes.jpg
+title: "Algorithms: what are they?"
+metaDescription: Nowadays, digital things are taking land concerning the time
+  that doesn't stop. For this reason, the word algorithm every day becomes more
+  frequent in listening to it in the lives of everyday people.
+thumbnail: /assets/algorithms-1.jpg
 ---
 Nowadays, digital things are taking land concerning the time that doesn't stop. For this reason, the word algorithm every day becomes more frequent in listening to it in the lives of everyday people.
 
@@ -44,7 +43,7 @@ As we can see, a recipe or algorithm is a set of instructions that define a proc
 
 The instructions for each step are defined as: sift, add, mix, and so on. With which they have as object cooking ingredients such as sugar, vanilla, wheat flour, etc.
 
-No solo están presentes en recetas de cocina, están por todos lados. Un ejemplo claro son las rutinas diarias, como levantarse de la cama y tenderla, tomar un baño, hacer tarea, ir a trabajar, étc. Hacemos las cosas paso por paso con el fin de terminar tareas (la mayoría de las veces).
+They're not just about cooking recipes, they're everywhere. A clear example is the daily routines such as getting up, making bed, taking a shower, doing homework, going to work, and so on. We do things step by step in order to accomplish tasks (most of the time).
 
 Dicho lo anterior, los algoritmos enfáticamente forman parte de la tecnología, ya que, en esencia son una técnica para realizar una tarea y eso es tecnología. Es tiempo de analizar el objeto algoritmo con lo que hoy en día hace mucho ruido, la computación.
 
