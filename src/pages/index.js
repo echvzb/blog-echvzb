@@ -14,11 +14,11 @@ const IndexPage = ({
   const { siteMetadata } = site,
   lang = siteMetadata.language,
   isEnUs = lang == 'en-US',
-  title = isEnUs ? 'Post ' : 'Publicaciones '; 
+  title = isEnUs ? 'Posts ' : 'Publicaciones '; 
 
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} lang={lang} />)
+    .map(edge => <PostLink key={edge.node.id} post={edge.node} lang={siteMetadata.language} />)
 
   return (
     <Layout>
