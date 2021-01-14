@@ -107,13 +107,19 @@ collections:
         value_field: authorData
         search_fields: [username]
         display_fields: [username]
-      - name: path
-        label: Path
-        widget: string
-        pattern: ['.', "Must have at least 12 characters"]
-        hint: "Path must start with /"
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
+      - name: serie
+        widget: relation
+        collection: series
+        value_field: serieName
+        search_fields: [serieName]
+      - name: chapter
+        widget: number
+        min: 0
+        value_type: int
+        label: Chapter
+        default: 0
       - label: Meta Description
         name: metaDescription
         widget: text
@@ -127,17 +133,7 @@ collections:
           config:
             multiple: false
       - { name: body, label: Body, widget: markdown }
-      - name: chapter
-        widget: number
-        min: 0
-        value_type: int
-        label: Chapter
-        default: 0
-      - name: serie
-        widget: relation
-        collection: series
-        value_field: serieName
-        search_fields: [serieName]
+      
 
 
     

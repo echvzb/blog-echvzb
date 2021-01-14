@@ -15,7 +15,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             id
             frontmatter {
-              path
+              serie
+              title
             }
           }
         }
@@ -27,11 +28,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
+  
   }
+  const normalTextToPath = txt => '/' + txt.match(/\w+/g).join('-').toLowerCase();
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const { serie, title } = node.frontmatter;
+
     createPage({
-      path: node.frontmatter.path,
+      path: normalTextToPath(serie) + normalTextToPath(title),
       component: blogPostTemplate,
       context: {}, // additional data can be passed via context
     })
