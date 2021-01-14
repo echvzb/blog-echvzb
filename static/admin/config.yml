@@ -59,7 +59,7 @@ collections:
     label: Author
     folder: _data/authors
     create: true
-    slug: '{{authorName}}'
+    slug: '{{authorData.authorName}}'
     fields:
       - name: authorData
         label: Author information
