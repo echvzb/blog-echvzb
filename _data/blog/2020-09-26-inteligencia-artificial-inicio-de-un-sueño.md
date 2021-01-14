@@ -1,5 +1,10 @@
 ---
 template: BlogPost
+author:
+  authorName: Eduardo Chavez
+  personalWebsite: https://echvzb.me
+  twitterUsername: "@echvzb"
+  profilePicture: /assets/author.jpg
 path: /inteligencia-artificial-el-nacimiento-de-una-idea
 date: 2020-09-26T07:21:48.981Z
 title: "Inteligencia Artificial: el nacimiento de una idea."
@@ -8,6 +13,8 @@ metaDescription: La idea “máquinas como humanos” ha sido expresada a travé
   Antigua Grecia. Desde escritos, hasta dispositivos mecánicos, ideas que tienen
   en común la inteligencia artificial.
 thumbnail: /assets/inteligencia-artificial-inicio-de-un-sueno.jpg
+chapter: 1
+serie: Algorithms
 ---
 Gracias a la capacidad humana de soñar, hace realidad múltiples inventos de ingeniería, obras literarias, leyes que cambien el mundo, entre otras cosas. Todo empieza por un sueño, imaginar cosas para hacerlas realidad.
 
