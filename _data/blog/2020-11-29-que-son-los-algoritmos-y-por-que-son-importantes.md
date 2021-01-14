@@ -1,6 +1,10 @@
 ---
 template: BlogPost
-author: Eduardo Chavez
+author:
+  authorName: Eduardo Chavez
+  personalWebsite: https://echvzb.me
+  twitterUsername: "@echvzb"
+  profilePicture: /assets/author.jpg
 path: /algorithms/what-are-they
 date: 2020-11-29T21:23:09.631Z
 title: "Algorithms: what are they?"
