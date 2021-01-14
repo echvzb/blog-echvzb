@@ -61,16 +61,20 @@ collections:
     create: true
     slug: '{{authorName}}'
     fields:
-      - { name: authorName, label: Author name, widget: string, required: true}
-      - { name: personalWebsite, label: Personal website, widget: string, required: true }
-      - { name: twitterUsername, hint: Start with @, label: Twitter username, widget: string, required: true }
-      - name: profilePicture
-        label: Profile picture 
-        widget: image 
-        required: true
-        media_library:
-          config:
-            multiple: false
+      - name: authorData
+        label: Author information
+        widget: object
+        fields:
+          - { name: authorName, label: Author name, widget: string, required: true}
+          - { name: personalWebsite, label: Personal website, widget: string, required: true }
+          - { name: twitterUsername, hint: Start with @, label: Twitter username, widget: string, required: true }
+          - name: profilePicture
+            label: Profile picture 
+            widget: image 
+            required: true
+            media_library:
+              config:
+                multiple: false
   - name: series
     label: Serie
     folder: _data/series
@@ -95,8 +99,9 @@ collections:
         name: author
         label: Author
         collection: authors
-        value_field: *
-        search_fields: [authorName]
+        value_field: authorData
+        search_fields: [authorData.authorName]
+        display_fields: [authorData.authorName]
       - name: path
         label: Path
         widget: string
