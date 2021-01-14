@@ -61,8 +61,13 @@ collections:
     create: true
     slug: '{{authorData.authorName}}'
     fields:
+      - name: username
+        label: Blog username
+        hint: The blog uses this name to refer to your personal information
+        widget: string
+        required: true
       - name: authorData
-        label: Author information
+        label: Author personal information
         widget: object
         fields:
           - { name: authorName, label: Author name, widget: string, required: true}
@@ -100,8 +105,8 @@ collections:
         label: Author
         collection: authors
         value_field: authorData
-        search_fields: [authorData.authorName]
-        display_fields: [authorData.authorName]
+        search_fields: [username]
+        display_fields: [username]
       - name: path
         label: Path
         widget: string
