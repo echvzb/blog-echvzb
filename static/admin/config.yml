@@ -51,10 +51,18 @@ collections:
             name: fbPage	
             label: Facebook Page	
           - widget: select	
-            name: Language	
+            name: language
+            label: language	
             options:	
               - {label: English, value: "en-US"}	
-              - {label: Español, value: "es-MX"}	
+              - {label: Español, value: "es-MX"}
+          - name: image	
+            label: Website seo img	
+            widget: image	
+            required: true	
+            media_library:	
+              config:	
+                multiple: false	
   - name: authors	
     label: Author	
     folder: _data/authors	

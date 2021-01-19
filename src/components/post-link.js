@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 
 const PostLink = ({ post, lang }) => {
-  console.log(post)
   return (
     <article className="card " >
       <Link to={post.frontmatter.path}>
