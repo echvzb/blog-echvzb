@@ -26,7 +26,7 @@ export default function Template({
   const seoData = {
     title: `${serieName} | ${siteMetadata.title}`,
     description: metaDescription,
-    img: featureImage,
+    img: siteMetadata.image,
     url: siteMetadata.siteUrl + path,
     author: siteMetadata.title,
     keywords: siteMetadata.keywords
@@ -66,6 +66,7 @@ export const pageQuery = graphql`
                             fbAppId
                             fbPage
                             keywords
+                            image
                         }
     }
     markdownRemark(frontmatter: {path: {eq: $path }}) {
