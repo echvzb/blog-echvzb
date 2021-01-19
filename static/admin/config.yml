@@ -152,7 +152,7 @@ collections:
         collection: series
         value_field: serieData
         search_fields: [serieIdentifier]
-      - label: Meta Description
+      - label: MetaDescription
         name: metaDescription
         widget: text
         required: true
