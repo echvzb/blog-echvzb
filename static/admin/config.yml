@@ -157,12 +157,12 @@ collections:
         widget: text
         required: true
       - name: seoImg
-          label: SEO Img
-          widget: image
-          required: true
-          media_library:
-            config:
-              multiple: false
+        label: SEO Img
+        widget: image
+        required: true
+        media_library:
+          config:
+            multiple: false
       - { name: body, label: Body, widget: markdown }
       
       
