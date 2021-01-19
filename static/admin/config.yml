@@ -127,7 +127,7 @@ collections:
           label: Template,	
           name: template,	
           widget: hidden,	
-          default: BlogPost,	
+          default: blogPost,	
         }	
       - widget: hidden	
         name: path	
