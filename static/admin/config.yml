@@ -152,17 +152,17 @@ collections:
         collection: series
         value_field: serieData
         search_fields: [serieIdentifier]
-      - label: MetaDescription
-        name: metaDescription
+      - name: metaDescription
+        label: MetaDescription
         widget: text
         required: true
-        - name: seoImg
-            label: SEO Img
-            widget: image
-            required: true
-            media_library:
-              config:
-                multiple: false
+      - name: seoImg
+          label: SEO Img
+          widget: image
+          required: true
+          media_library:
+            config:
+              multiple: false
       - { name: body, label: Body, widget: markdown }
       
       
