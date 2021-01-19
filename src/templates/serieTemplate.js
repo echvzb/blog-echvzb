@@ -15,7 +15,7 @@ export default function Template({
   const { siteMetadata } = site;
   const lang = siteMetadata.language,
     isEnUs = lang === 'en-US',
-    text = isEnUs ? { firstTitle: "Serie description", secondTitle: "Entries" } : { firstTitle: "Descripción de serie", secondTitle: "Entradas" };
+    text = isEnUs ? { firstTitle: "Series description", secondTitle: "Entries" } : { firstTitle: "Descripción de serie", secondTitle: "Entradas" };
 
   const { serieData: { color, textColor, serieName, featureImage }, metaDescription, path } = frontmatter;
 
