@@ -16,7 +16,7 @@ export default () => {
     `
   )
   const lang = data.site.siteMetadata.language,
-      isEnUs = lang == 'en-US', 
+      isEnUs = lang === 'en-US', 
       title = isEnUs ? 'Page not found' : 'Página no encontrada',
       description = isEnUs ? 'You are on a wrong page. For more post, visit ' : 'Estás en una página erronea. Para más publicaciones, visita ',
       linkText = isEnUs ? 'Home' : 'Inicio';

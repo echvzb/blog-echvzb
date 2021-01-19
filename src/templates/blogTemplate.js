@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/SEO";
 import FacebookComments from "../components/facebookComments";
 import ShareButtons from "../components/shareButtons";
+import Breadcrumb from "../components/breadcrumb"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -13,24 +14,31 @@ export default function Template({
   const url = site.siteMetadata.siteUrl + frontmatter.path;
   const { siteMetadata } = site;
   const lang = siteMetadata.language,
-    isEnUs = lang == 'en-US',
+    isEnUs = lang === 'en-US',
     shareTxt = isEnUs ? 'Share' : 'Compartir';
 
+  let pathElems = [[frontmatter.path.slice(0,frontmatter.path.indexOf('/',1)), frontmatter.serieName], [frontmatter.path,frontmatter.chapter + ". " +frontmatter.title]];
+
+  pathElems = pathElems.map(elem => {
+    return ({path: elem[0], nameLink: elem[1]})
+  });
+  console.table(frontmatter, siteMetadata)
   return (
     <Layout>
       <SEO frontmatter={frontmatter} siteMetadata={siteMetadata} />
+      <Breadcrumb pathElems={pathElems} />
       {!frontmatter.thumbnail && (
         <div className="post-thumbnail">
           <h1 className="post-title">{frontmatter.title}</h1>
-          <div className="post-meta">{new Date(frontmatter.date).toLocaleDateString("es-MX", { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+          <div className="post-meta">{new Date(frontmatter.date).toLocaleDateString(siteMetadata.language, { year: 'numeric', month: 'long', day: 'numeric' })}</div>
         </div>
       )}
       {!!frontmatter.thumbnail && (
         <div className="post-thumbnail" style={{ backgroundImage: `url(${frontmatter.thumbnail})` }}>
           <h1 className="post-title">{frontmatter.title}</h1>
           <div className='author'>
-            <img src='/assets/author.jpg' alt={siteMetadata.author + ' picture.'} />
-            <a href={siteMetadata.personalWebsiteUrl}>{siteMetadata.author}</a>
+            <img src={frontmatter.author.profilePicture} alt={frontmatter.author.authorName + ' picture.'} />
+            <a href={frontmatter.author.personalWebsite}>{frontmatter.author.authorName}</a>
           </div>
           <div className="post-meta">{new Date(frontmatter.date).toLocaleDateString(siteMetadata.language, { year: 'numeric', month: 'long', day: 'numeric' })}</div>
         </div>
@@ -55,17 +63,15 @@ export const pageQuery = graphql`
                           siteMetadata {
                             title
                             description
-                            author
                             image
                             siteUrl
                             language
-                            personalWebsiteUrl
                             fbAppId
                             fbPage
                             keywords
                         }
     }
-    markdownRemark(frontmatter: {path: {eq: $path } }) {
+    markdownRemark(frontmatter: {path: {eq: $path }, template: {eq: "blogPost" } }) {
                           html
       frontmatter {
                           date(formatString: "MMMM DD, YYYY")
@@ -73,6 +79,14 @@ export const pageQuery = graphql`
         title
         thumbnail
         metaDescription
+        serieName
+        chapter
+        author {
+          authorName
+          personalWebsite
+          twitterUsername
+          profilePicture
+        }
       }
     }
   }

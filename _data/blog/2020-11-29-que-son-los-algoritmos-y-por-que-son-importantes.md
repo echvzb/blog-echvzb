@@ -1,19 +1,20 @@
 ---
-template: BlogPost
+template: blogPost
 author:
   authorName: Eduardo Chavez
-  personalWebsite: https://echvzb.me
-  twitterUsername: "@echvzb"
+  personalWebsite: 'https://echvzb.me'
+  twitterUsername: '@echvzb'
   profilePicture: /assets/author.jpg
-path: /algorithms/what-are-they
+path: /algorithms/algorithms-what-are-they
 date: 2020-11-29T21:23:09.631Z
-title: "Algorithms: what are they?"
-metaDescription: Nowadays, digital things are taking land concerning the time
-  that doesn't stop. For this reason, the word algorithm every day becomes more
-  frequent in listening to it in the lives of everyday people.
+title: 'Algorithms: what are they?'
+metaDescription: >-
+  Nowadays, digital things are taking land concerning the time that doesn't
+  stop. For this reason, the word algorithm every day becomes more frequent in
+  listening to it in the lives of everyday people.
 thumbnail: /assets/algorithms-1.jpg
 chapter: 0
-serie: Algorithms
+serieName: Algorithms
 ---
 Nowadays, digital things are taking land concerning the time that doesn't stop. For this reason, the word algorithm every day becomes more frequent in listening to it in the lives of everyday people.
 

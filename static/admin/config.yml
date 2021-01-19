@@ -82,12 +82,39 @@ collections:
                 multiple: false
   - name: series
     label: Serie
-    folder: _data/series
+    folder: _data/blog
     create: true
     slug: '{{serieName}}'
     fields:
-      - { name: serieName, label: Serie name, widget: string, required: true }
-      - { name: description, label: Description, widget: text }
+      - { name: serieIdentifier, label: Serie ID, widget: string, required: true }
+      - name: serieData
+        label: Serie information
+        widget: object
+        fields:
+          - { name: serieName, label: Serie name, widget: string, required: true}
+          - { name: color, label: Serie color HEX, widget: string}
+          - label: Text color
+            name: textColor
+            widget: "select"
+            options:
+              - { label: "Black", value: "#000" }
+              - { label: "White", value: "#fff" }
+          - name: featureImage
+            label: Serie feature image
+            widget: image
+            required: true
+            media_library:
+              config:
+                multiple: false
+      - { name: metaDescription, label: Description, widget: text, required: true}
+      - widget: hidden
+        name: path
+        label: Path
+        default: ""
+      - name: template
+        label: template
+        widget: hidden
+        default: "serie"
   - name: blog
     label: Blog
     folder: _data/blog
@@ -100,6 +127,10 @@ collections:
           widget: hidden,
           default: BlogPost,
         }
+      - widget: hidden
+        name: path
+        label: Path
+        default: ""
       - widget: relation
         name: author
         label: Author
@@ -109,7 +140,7 @@ collections:
         display_fields: [username]
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
-      - name: serie
+      - name: serieName
         widget: relation
         collection: series
         value_field: serieName

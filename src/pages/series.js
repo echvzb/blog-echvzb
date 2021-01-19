@@ -1,11 +1,11 @@
 import React from "react"
 import { graphql } from 'gatsby';
 import Layout from "../components/layout";
-import PostLink from "../components/post-link";
+import SerieLink from "../components/serieLink";
 import HeroHeader from "../components/heroHeader";
 import SEO from "../components/SEO";
 
-const IndexPage = ({
+const SeriesPage = ({
   data: {
     site,
     allMarkdownRemark: { edges },
@@ -13,28 +13,25 @@ const IndexPage = ({
 }) => {
   const { siteMetadata } = site,
   lang = siteMetadata.language,
-  isEnUs = lang === 'en-US',
-  title = isEnUs ? 'Latest posts ' : 'Publicaciones '; 
+  isEnUs = lang === 'en-US'; 
 
-  const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} lang={siteMetadata.language} />)
+  const Series = edges
+    .map(edge => <SerieLink key={edge.node.id} serie={edge.node} />)
 
   return (
     <Layout>
       <SEO siteMetadata = {siteMetadata}/>
-      <HeroHeader/>
-      <h2>{title}&darr;</h2>
+      <h2>Series</h2>
       <div className="grids">
-        {Posts}
+        {Series}
       </div>
     </Layout>
   )
 }
 
-export default IndexPage
+export default SeriesPage;
 export const pageQuery = graphql`
-  query indexPageQuery {
+  query {
     site {
       siteMetadata {
         title
@@ -45,16 +42,15 @@ export const pageQuery = graphql`
         keywords
       }
     }
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(filter: { frontmatter:  { template: { eq:"serie" }}}) {
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             path
-            title
-            thumbnail
+            serieName
+            color
+            textColor
           }
         }
       }

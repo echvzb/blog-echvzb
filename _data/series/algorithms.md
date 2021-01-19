@@ -1,4 +1,0 @@
----
-serieName: Algorithms
-description: Dummy
----
