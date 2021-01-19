@@ -31,21 +31,23 @@ export default function Template({
     author: siteMetadata.title,
     keywords: siteMetadata.keywords
   }
-  
+  const styleHeadings = {
+    textDecoration: `0.2rem underline ${color}`
+  }
   return (
     <Layout>
       <SEO seoData={seoData} />
       <div className='serie-page' >
         <Breadcrumb pathElems={[{ path: path, nameLink: serieName }]} />
-        <div className='serie-feature-img' style={`background-image: url("${featureImage}"); background-color: ${color};`}>
-          <h1 className='serie-name' style={`color: ${textColor};`}>{serieName}</h1>
+        <div className='serie-feature-img' style={{backgroundImage:`url("${featureImage}")`, backgroundColor:color}}>
+          <h1 className='serie-name' style={{color: textColor}}>{serieName}</h1>
         </div>
-        <h2 style={`text-decoration: 0.2rem underline ${color};`}>{text.firstTitle}:</h2>
+        <h2 style={styleHeadings}>{text.firstTitle}:</h2>
         <div className='serie-description'>{metaDescription}</div>
         <br />
         <br />
         <br />
-        <h2 style={`text-decoration: 0.2rem underline ${color};`}>{text.secondTitle}:</h2>
+        <h2 style={styleHeadings}>{text.secondTitle}:</h2>
         <div className="grids two-grids">
           {posts}
         </div>
