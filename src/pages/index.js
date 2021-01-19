@@ -19,7 +19,7 @@ const IndexPage = ({
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map(edge => <PostLink key={edge.node.id} post={edge.node} lang={siteMetadata.language} />)
-  
+
   const seoData = {
     title: siteMetadata.title,
     description: siteMetadata.description,
@@ -53,7 +53,10 @@ export const pageQuery = graphql`
         keywords
       }
     }
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: { frontmatter:  { template: { eq:"blogPost" }}}
+      ) {
       edges {
         node {
           id

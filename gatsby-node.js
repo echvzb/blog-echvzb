@@ -2,6 +2,7 @@ const path = require(`path`);
 const changePathName = require(path.resolve('build_internal_js/changePathName/index.js'));
 
 changePathName.start(path.resolve('_data/blog'));
+changePathName.start(path.resolve('_data/series'));
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   
