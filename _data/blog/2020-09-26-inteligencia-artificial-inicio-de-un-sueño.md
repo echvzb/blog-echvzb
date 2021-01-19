@@ -15,7 +15,12 @@ metaDescription: >-
   inteligencia artificial.
 thumbnail: /assets/inteligencia-artificial-inicio-de-un-sueno.jpg
 chapter: 1
-serieName: Intro to Neuroscience
+seoImg: assets/intro-to-neuroscience-1-seo.jpg
+serieData:
+  serieName: Intro to Neuroscience
+  color: "#8e24aa"
+  textColor: "#fff"
+  featureImage: /assets/algorithms-1.jpg
 ---
 Gracias a la capacidad humana de soñar, hace realidad múltiples inventos de ingeniería, obras literarias, leyes que cambien el mundo, entre otras cosas. Todo empieza por un sueño, imaginar cosas para hacerlas realidad.
 
@@ -27,16 +32,16 @@ Antes de comenzar, tenemos que analizar las situaciones bajo el contexto de la �
 
 ### Sueños con una IA.
 
-* [Aristóteles: automatización.](#aristoteles)
-* [Ovidio: Galatea y Pigmalión.](#ovidio)
-* [El Talmud: Golem.](#talmud)
-* [Ramon Llull: Ars Magna.](#ramon)
-* [Leonardo Da Vinci: Robot humanoide.](#da-vinci)
-* [Thomas Hobbes: Leviathan.](#thomas)
-* [Jacques de Vaucanson: Pato mecánico.](#jacques)
-* [Los cuentos de Hoffmann: Olympia.](#hoffmann)
-* [R.U.R. (Rossum's Universal Robots).](#rur)
-* [Isaac Asimov: I Robot.](#asimov)
+- [Aristóteles.](#aristóteles)
+- [Ovidio: Galatea y Pigmalión.](#ovidio-galatea-y-pigmalión)
+- [El Talmud: Golem.](#el-talmud-golem)
+- [Ramon Llull: Ars Magna.](#ramon-llull-ars-magna)
+- [Leonardo Da Vinci: Robot humanoide.](#leonardo-da-vinci-robot-humanoide)
+- [Thomas Hobbes: Leviathan.](#thomas-hobbes-leviathan)
+- [Jacques de Vaucanson: Pato mecánico.](#jacques-de-vaucanson-pato-mecánico)
+- [Los cuentos de Hoffmann: Olympia.](#los-cuentos-de-hoffmann-olympia)
+- [R.U.R. (Rossum's Universal Robots).](#rur-rossums-universal-robots)
+- [Isaac Asimov: I Robot.](#isaac-asimov-i-robot)
 
 <div id="aristoteles"></div>
 

@@ -8,8 +8,8 @@ exports.change = pathFile => {
         if(err) throw err;
     
         const result = matter(dataFile.toString());
-        const { path, serieName } = result.data;
-        let realPath = normalTextToPath(serieName);
+        const { path, serieData } = result.data;
+        let realPath = normalTextToPath(serieData.serieName);
         
         if(result.data.title){
             realPath += normalTextToPath(result.data.title);

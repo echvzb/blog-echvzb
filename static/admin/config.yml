@@ -84,7 +84,8 @@ collections:
     label: Serie
     folder: _data/blog
     create: true
-    slug: '{{serieName}}'
+    slug: '{{serieData.serieName}}'
+    identifier_field: serieIdentifier
     fields:
       - { name: serieIdentifier, label: Serie ID, widget: string, required: true }
       - name: serieData
@@ -140,30 +141,30 @@ collections:
         display_fields: [username]
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
-      - name: serieName
-        widget: relation
-        collection: series
-        value_field: serieName
-        search_fields: [serieName]
       - name: chapter
         widget: number
         min: 0
         value_type: int
         label: Chapter
         default: 0
+      - name: serieData
+        widget: relation
+        collection: series
+        value_field: serieData
+        search_fields: [serieIdentifier]
       - label: Meta Description
         name: metaDescription
         widget: text
         required: true
-      - label: Featured Image
-        name: thumbnail
-        widget: image
-        hint: "Image size 1280x800"
-        required: true
-        media_library:
-          config:
-            multiple: false
+        - name: seoImg
+            label: SEO Img
+            widget: image
+            required: true
+            media_library:
+              config:
+                multiple: false
       - { name: body, label: Body, widget: markdown }
+      
       
 
 

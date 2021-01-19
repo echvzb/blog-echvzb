@@ -273,22 +273,31 @@ a {
   transform: scale(1.1);
   box-shadow: var(--card-shadow);
 }
-.serie-name, .serie-title-container{
+.serie-name, .serie-feature-img{
   border-radius: 4rem 0.2rem 4rem 0.2rem;
   box-sizing: border-box;
 }
 .serie-name{
   font-size: 3rem !important;
-  padding: 7rem 0;
+  padding: 10rem 0;
   text-align: center;
 }
-.serie-title-container{
-  background: var(--featured-bg);
+.serie-feature-img{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: luminosity;
 }
 .serie-description{
   font-size: 1.2rem;
 }
-.serie-page h2{
+.chapter-author{
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+.chapter-description{
+  font-size: 1rem;
+  font-weight: lighter;
 }
 .site-header {
   display: grid;
@@ -420,9 +429,14 @@ a {
     text-align: center;
   }
 }
-.serie-title-container, .post-thumbnail{
+.serie-feature-img, .post-thumbnail{
   animation-name: inThumbnail;
   animation-duration: 1s;
+}
+.series-page h1{
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin: 5rem 0 6rem;
 }
 .post-thumbnail {
   text-align: center;

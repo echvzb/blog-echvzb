@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from 'gatsby';
 import Layout from "../components/layout";
 import SerieLink from "../components/serieLink";
-import HeroHeader from "../components/heroHeader";
 import SEO from "../components/SEO";
 
 const SeriesPage = ({
@@ -11,19 +10,28 @@ const SeriesPage = ({
     allMarkdownRemark: { edges },
   },
 }) => {
-  const { siteMetadata } = site,
-  lang = siteMetadata.language,
-  isEnUs = lang === 'en-US'; 
+  const { siteMetadata } = site;
 
   const Series = edges
     .map(edge => <SerieLink key={edge.node.id} serie={edge.node} />)
 
+  const seoData = {
+    title: `Series | ${siteMetadata.title}`,
+    description: siteMetadata.description,
+    img: siteMetadata.image,
+    url: siteMetadata.siteUrl + "/series",
+    author: siteMetadata.title,
+    keywords: siteMetadata.keywords
+  }
   return (
     <Layout>
-      <SEO siteMetadata = {siteMetadata}/>
-      <h2>Series</h2>
-      <div className="grids">
-        {Series}
+
+      <SEO seoData={seoData} />
+      <div className='series-page'>
+        <h1>Series</h1>
+        <div className="grids">
+          {Series}
+        </div>
       </div>
     </Layout>
   )
@@ -48,9 +56,11 @@ export const pageQuery = graphql`
           id
           frontmatter {
             path
-            serieName
-            color
-            textColor
+            serieData {
+              serieName
+              color
+              textColor
+            }
           }
         }
       }

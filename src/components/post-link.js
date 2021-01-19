@@ -6,9 +6,7 @@ const PostLink = ({ post, lang }) => {
   return (
     <article className="card " >
       <Link to={post.frontmatter.path}>
-        {!!post.frontmatter.thumbnail && (
-          <img src={post.frontmatter.thumbnail} alt={post.frontmatter.title + "- Featured Shot"} />
-        )}
+          <img src={post.frontmatter.serieData.featureImage} alt={post.frontmatter.title + "- Featured Shot"} />
       </Link>
       <header>
         <h2 className="post-title" >

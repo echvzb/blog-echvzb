@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/SEO";
 import colorLuminance from "../components/colorLuminance"
 import Breadcrumb from "../components/breadcrumb"
-import PostLink from "../components/post-link";
+import ChapterLink from "../components/chapterCard";
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -14,28 +14,39 @@ export default function Template({
   let posts = allMarkdownRemark.edges;
   const { siteMetadata } = site;
   const lang = siteMetadata.language,
-    isEnUs = lang === 'en-US';
+    isEnUs = lang === 'en-US',
+    text = isEnUs ? { firstTitle: "Serie description", secondTitle: "Entries" } : { firstTitle: "Descripción de serie", secondTitle: "Entradas" };
 
-  posts = posts.filter(elem => elem.node.frontmatter.serieName === frontmatter.serieName)
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} lang={siteMetadata.language} />);
+  const { serieData: { color, textColor, serieName, featureImage }, metaDescription, path } = frontmatter;
 
-  const color = "#" + frontmatter.color;
-
+  posts = posts.filter(elem => elem.node.frontmatter.serieData.serieName === serieName)
+    .map(edge => <ChapterLink key={edge.node.id} post={edge.node} lang={siteMetadata.language} firstColor={colorLuminance(color, 0.07)} secondColor={colorLuminance(color, -0.1)} textColor={textColor} />);
+  
+  
+  const seoData = {
+    title: `${serieName} | ${siteMetadata.title}`,
+    description: metaDescription,
+    img: featureImage,
+    url: siteMetadata.siteUrl + path,
+    author: siteMetadata.title,
+    keywords: siteMetadata.keywords
+  }
+  
   return (
     <Layout>
-      {/* <SEO frontmatter={frontmatter} siteMetadata={siteMetadata} /> */}
+      <SEO seoData={seoData} />
       <div className='serie-page' >
-        <Breadcrumb pathElems={[{ path: frontmatter.path, nameLink: frontmatter.serieName }]} />
-        <div className='serie-title-container' style={`background: linear-gradient(145deg, ${colorLuminance(color, 0.7)}, ${colorLuminance(color, -0.1)})`}>
-          <h1 className='serie-name' style={`color: #${frontmatter.textColor};`}>{frontmatter.serieName}</h1>
+        <Breadcrumb pathElems={[{ path: path, nameLink: serieName }]} />
+        <div className='serie-feature-img' style={`background-image: url("${featureImage}"); background-color: ${color};`}>
+          <h1 className='serie-name' style={`color: ${textColor};`}>{serieName}</h1>
         </div>
-        <h2 style={`text-decoration: 0.2rem underline ${color};`}>Serie description:</h2>
-        <div className='serie-description'>{frontmatter.metaDescription}</div>
+        <h2 style={`text-decoration: 0.2rem underline ${color};`}>{text.firstTitle}:</h2>
+        <div className='serie-description'>{metaDescription}</div>
         <br />
         <br />
         <br />
-        <h2 style={`text-decoration: 0.2rem underline ${color};`}>Chapters:</h2>
-        <div className="grids">
+        <h2 style={`text-decoration: 0.2rem underline ${color};`}>{text.secondTitle}:</h2>
+        <div className="grids two-grids">
           {posts}
         </div>
       </div>
@@ -48,8 +59,6 @@ export const pageQuery = graphql`
                           site {
                           siteMetadata {
                             title
-                            description
-                            image
                             siteUrl
                             language
                             fbAppId
@@ -60,10 +69,13 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: {path: {eq: $path }}) {
       frontmatter {
         path
-        serieName
         metaDescription
-        color
-        textColor
+        serieData {
+          serieName
+          color
+          textColor
+          featureImage
+        }
       }
     }
     allMarkdownRemark(filter: { frontmatter:  { template: { eq:"blogPost" }}}) {
@@ -72,11 +84,15 @@ export const pageQuery = graphql`
           id
           frontmatter {
             chapter
-            date
             path
             title
-            thumbnail
-            serieName
+            metaDescription
+            serieData {
+              serieName
+            }
+            author {
+              authorName
+            }
           }
         }
       }

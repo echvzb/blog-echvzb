@@ -17,33 +17,34 @@ export default function Template({
     isEnUs = lang === 'en-US',
     shareTxt = isEnUs ? 'Share' : 'Compartir';
 
-  let pathElems = [[frontmatter.path.slice(0,frontmatter.path.indexOf('/',1)), frontmatter.serieName], [frontmatter.path,frontmatter.chapter + ". " +frontmatter.title]];
+  let pathElems = [[frontmatter.path.slice(0, frontmatter.path.indexOf('/', 1)), frontmatter.serieData.serieName], [frontmatter.path, frontmatter.chapter + ". " + frontmatter.title]];
 
   pathElems = pathElems.map(elem => {
-    return ({path: elem[0], nameLink: elem[1]})
+    return ({ path: elem[0], nameLink: elem[1] })
   });
-  console.table(frontmatter, siteMetadata)
+
+  const seoData = {
+    title: `${frontmatter.title} - ${frontmatter.serieData.serieName} | ${siteMetadata.title}`,
+    description: frontmatter.metaDescription,
+    img: frontmatter.seoImg,
+    url: siteMetadata.siteUrl + frontmatter.path,
+    author: frontmatter.author.authorName,
+    keywords: siteMetadata.keywords
+  }
+
   return (
     <Layout>
-      <SEO frontmatter={frontmatter} siteMetadata={siteMetadata} />
+      <SEO seoData={seoData} />
       <Breadcrumb pathElems={pathElems} />
-      {!frontmatter.thumbnail && (
-        <div className="post-thumbnail">
-          <h1 className="post-title">{frontmatter.title}</h1>
-          <div className="post-meta">{new Date(frontmatter.date).toLocaleDateString(siteMetadata.language, { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+      <div className="post-thumbnail" style={{ backgroundImage: `url(${frontmatter.serieData.featureImage})` }}>
+        <h1 className="post-title">{frontmatter.title}</h1>
+        <div className='author'>
+          <img src={frontmatter.author.profilePicture} alt={frontmatter.author.authorName + ' picture.'} />
+          <a href={frontmatter.author.personalWebsite}>{frontmatter.author.authorName}</a>
         </div>
-      )}
-      {!!frontmatter.thumbnail && (
-        <div className="post-thumbnail" style={{ backgroundImage: `url(${frontmatter.thumbnail})` }}>
-          <h1 className="post-title">{frontmatter.title}</h1>
-          <div className='author'>
-            <img src={frontmatter.author.profilePicture} alt={frontmatter.author.authorName + ' picture.'} />
-            <a href={frontmatter.author.personalWebsite}>{frontmatter.author.authorName}</a>
-          </div>
-          <div className="post-meta">{new Date(frontmatter.date).toLocaleDateString(siteMetadata.language, { year: 'numeric', month: 'long', day: 'numeric' })}</div>
-        </div>
-      )}
-      <ShareButtons url={url} shareTxt={shareTxt}/>
+        <div className="post-meta">{new Date(frontmatter.date).toLocaleDateString(siteMetadata.language, { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+      </div>
+      <ShareButtons url={url} shareTxt={shareTxt} />
       <div className="blog-post-container">
         <article className="post">
           <div
@@ -77,15 +78,18 @@ export const pageQuery = graphql`
                           date(formatString: "MMMM DD, YYYY")
         path
         title
-        thumbnail
         metaDescription
-        serieName
         chapter
+        seoImg
         author {
           authorName
           personalWebsite
           twitterUsername
           profilePicture
+        }
+        serieData {
+          serieName
+          featureImage
         }
       }
     }

@@ -12,18 +12,26 @@ const IndexPage = ({
   },
 }) => {
   const { siteMetadata } = site,
-  lang = siteMetadata.language,
-  isEnUs = lang === 'en-US',
-  title = isEnUs ? 'Latest posts ' : 'Publicaciones '; 
+    lang = siteMetadata.language,
+    isEnUs = lang === 'en-US',
+    title = isEnUs ? 'Latest posts ' : 'Publicaciones ';
 
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map(edge => <PostLink key={edge.node.id} post={edge.node} lang={siteMetadata.language} />)
-
+  
+  const seoData = {
+    title: siteMetadata.title,
+    description: siteMetadata.description,
+    img: siteMetadata.image,
+    url: siteMetadata.siteUrl,
+    author: siteMetadata.title,
+    keywords: siteMetadata.keywords
+  }
   return (
     <Layout>
-      <SEO siteMetadata = {siteMetadata}/>
-      <HeroHeader/>
+      <SEO seoData={seoData} />
+      <HeroHeader />
       <h2>{title}&darr;</h2>
       <div className="grids">
         {Posts}
@@ -54,7 +62,9 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             title
-            thumbnail
+            serieData {
+              featureImage
+            }
           }
         }
       }
