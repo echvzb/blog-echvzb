@@ -9,6 +9,13 @@ module.exports = {
   siteMetadata: require("./site-meta-data.json"),
   plugins: [
     {
+      resolve: `@isamrish/gatsby-plugin-google-adsense`,
+      options: {
+        googleAdClientId: "ca-pub-9824850955984281",
+        head: true
+      }
+    },
+    {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
       id: "GTM-N8FVFN4",

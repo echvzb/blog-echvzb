@@ -18,9 +18,6 @@ export default ({ children }) => {
   )
   return (
     <div>
-      <Helmet>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
-      </Helmet>
       <div className="site-wrapper">
         <header className="site-header">
           <div className="site-title">
@@ -35,7 +32,7 @@ export default ({ children }) => {
         </header>
         {children}
         <footer className="site-footer">
-          <p>Made with <span role='img' aria-label="heart">&#10084;&#65039;</span> by &copy; <a href='https://echvzb.me'>echvzb</a> {new Date().getFullYear()}</p>
+          <p>Made with <span role='img' aria-label="heart">&#10084;&#65039;</span> by &copy; {new Date().getFullYear()} <a href='https://echvzb.me'>echvzb</a></p>
         </footer>
       </div>
     </div>
