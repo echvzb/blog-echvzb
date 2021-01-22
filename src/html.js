@@ -11,6 +11,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <script data-ad-client="ca-pub-9824850955984281" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
         {props.headComponents}
       </head>
