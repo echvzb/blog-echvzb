@@ -2,7 +2,7 @@
 username: echvzb
 authorData:
   authorName: Eduardo Chavez
-  personalWebsite: https://echvzb.me
+  personalWebsite: https://portfolio.echvzb.me
   twitterUsername: "@echvzb"
   profilePicture: /assets/author.jpg
 ---
