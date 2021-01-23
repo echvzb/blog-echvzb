@@ -2,7 +2,7 @@
 serieIdentifier: Personal
 serieData:
   serieName: Personal
-  color: "#c51162"
+  color: "#212121"
   textColor: "#fff"
   featureImage: /assets/personal-serie.jpg
 metaDescription: This space is about my life, my thinking, my jorney in life.
