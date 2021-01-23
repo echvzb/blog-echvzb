@@ -29,7 +29,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
   letter-spacing: 0.06rem;
 }
 * {
@@ -56,7 +56,7 @@ body.light {
   --contact-bg: #f7f8fe;
   --contact-bdr: #d3d6e7;
   --input-bg: var(--background);
-  --box-shadow-share: -5px 5px 10px #646464, 5px -5px 10px #ffffff;
+  --box-shadow-share: -1px 1px 10px #646464, 5px -5px 10px #ffffff;
 }
 
 body.dark {
@@ -141,12 +141,13 @@ body.dark {
   justify-content: center;
   img {
     width: 5rem;
-    border-radius: 0.25rem 2.5rem;
+    border-radius: 0.23rem 1.92rem;
     margin-right: 1rem;
+    box-shadow: -0.3rem 0.3rem 0.6rem var(--secondary-color-t), 0.3rem -0.3rem 0.6rem var(--primary-color-t);
   }
   a {
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.25rem;
     color: #fafafa;
   }
 }
@@ -315,25 +316,26 @@ a {
 .logo-header-container {
   width: 4.5rem;
   height: 4.5rem;
-  background: linear-gradient(145deg, #ffffff, #e1e1e1);
+  background: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1rem;
+  border-radius: 0.2rem 1.7rem;
+  box-shadow: inset 0.1rem 0.1rem 0.4rem #646464, inset -0.1rem -0.1rem 0.4rem #fff;
 }
 .border-logo-grd {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 5rem;
-  height: 5rem;
+  width: 5.25rem;
+  height: 5.25rem;
   background: var(--border-logo-grd);
   justify-self: center;
-  border-radius: 1rem;
+  border-radius: 0.23rem 1.92rem;
 }
 .logo-header {
-  width: 3rem;
-  height: 3rem;
+  width: 2.8rem;
+  height: 2.8rem;
   background-image: var(--logo-url);
   background-size: cover;
 }
@@ -471,6 +473,9 @@ a {
     height: 100%;
     z-index: 1;
   }
+  .post-title{
+    font-size: 2.5rem;
+  }
   > * {
     position: relative;
     z-index: 2;
@@ -478,6 +483,7 @@ a {
   .post-meta {
     color: rgba(255, 255, 255, 0.8);
     margin: 2rem 0;
+    font-size: 1.1rem;
   }
 }
 .grids {

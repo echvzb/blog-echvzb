@@ -23,7 +23,7 @@ body.light {
 body.dark {
     --inner-shadow-thumb: inset -5px 5px 20px #bebebe, inset 5px -5px 20px #ffffff;
     --btn-bg-share: linear-gradient(0deg, #4bc2e0, #3fa3bc);
-    --box-shadow-share: -5px 5px 10px #080a28, 5px -5px 10px #2228a2;
+    --box-shadow-share: -1px 1px 10px #2228a2, 5px -5px 10px #2228a2;
     --card-bg: linear-gradient(145deg, #295d8c, #306ea6);
     box-shadow: inset -5px -5px 10px #080a28, inset 5px 5px 50px #2228a2;
 }
