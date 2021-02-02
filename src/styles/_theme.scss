@@ -11,20 +11,26 @@
     --share-bg: linear-gradient(0deg, #306ea6, #295d8c);
     --border-logo-grd: linear-gradient(145deg, var(--between-color), var(--secondary-color-t));
     --logo-url: url("https://res.cloudinary.com/df9fhapay/image/upload/v1606528768/echvzb-logo_a3gl3p.svg");
-    
+    --thum-mask-img-grd: linear-gradient(0deg, rgba(21, 25, 101, 0.7), rgba(70, 181, 209, 0.7))
 }
 
 body.light {
     --card-bg: linear-gradient(145deg, #3fa3bc, #4bc2e0);
     --btn-bg-share: linear-gradient(0deg, #161b6c, #13175b);
-    --inner-shadow-thumb: inset -5px 5px 20px #10134d, inset 5px -5px 20px #1a1f7d;
+    --primary-box-shadow: 0.5rem 0.5rem 1.5rem #646464, -0.5rem -0.5rem 1.5rem #fff;
+    --primary-box-shadow-hover: 2rem 2rem 2rem #646464, -0.5rem -0.5rem 1.5rem #fff;
+    --primary-inner-box-shadow: inset 0.5rem 0.5rem 1.5rem #080a28, inset -0.5rem -0.5rem 1.5rem #2228a2;
 }
 
+
+
 body.dark {
-    --inner-shadow-thumb: inset -5px 5px 20px #bebebe, inset 5px -5px 20px #ffffff;
     --btn-bg-share: linear-gradient(0deg, #4bc2e0, #3fa3bc);
     --box-shadow-share: -1px 1px 10px #2228a2, 5px -5px 10px #2228a2;
     --card-bg: linear-gradient(145deg, #295d8c, #306ea6);
     box-shadow: inset -5px -5px 10px #080a28, inset 5px 5px 50px #2228a2;
+    --primary-box-shadow: 0.5rem 0.5rem 1.5rem #080a28, -0.5rem -0.5rem 1.5rem #2228a2;
+    --primary-box-shadow-hover: 2rem 2rem 2rem #080a28, -0.5rem -0.5rem 1.5rem #2228a2;
+    --primary-inner-box-shadow: inset 0.5rem 0.5rem 1.5rem #646464, inset -0.5rem -0.5rem 1.5rem #fff;
 }
 

@@ -102,13 +102,7 @@ collections:
         widget: object	
         fields:	
           - { name: serieName, label: Serie name, widget: string, required: true}	
-          - { name: color, label: Serie color HEX, widget: string}	
-          - label: Text color	
-            name: textColor	
-            widget: "select"	
-            options:	
-              - { label: "Black", value: "#000" }	
-              - { label: "White", value: "#fff" }	
+          - { name: color, label: Serie color HEX (only dark colors), widget: string}	
           - name: featureImage	
             label: Serie feature image	
             widget: image	

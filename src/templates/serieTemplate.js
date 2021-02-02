@@ -2,9 +2,9 @@ import React from "react"
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/SEO";
-import colorLuminance from "../components/colorLuminance"
 import Breadcrumb from "../components/breadcrumb"
 import ChapterLink from "../components/chapterCard";
+
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -17,10 +17,10 @@ export default function Template({
     isEnUs = lang === 'en-US',
     text = isEnUs ? { firstTitle: "Series description", secondTitle: "Entries" } : { firstTitle: "Descripción de serie", secondTitle: "Entradas" };
 
-  const { serieData: { color, textColor, serieName, featureImage }, metaDescription, path } = frontmatter;
+  const { serieData: { serieName, featureImage }, metaDescription, path } = frontmatter;
 
   posts = posts.filter(elem => elem.node.frontmatter.serieData.serieName === serieName)
-    .map(edge => <ChapterLink key={edge.node.id} post={edge.node} lang={siteMetadata.language} firstColor={colorLuminance(color, 0.07)} secondColor={colorLuminance(color, -0.1)} textColor={textColor} />);
+    .map(edge => <ChapterLink key={edge.node.id} post={edge.node} lang={siteMetadata.language} />);
   
   
   const seoData = {
@@ -30,24 +30,23 @@ export default function Template({
     url: siteMetadata.siteUrl + path,
     author: siteMetadata.title,
     keywords: siteMetadata.keywords
-  }
-  const styleHeadings = {
-    textDecoration: `0.2rem underline ${color}`
-  }
+  },
+  featureImageStyles = {
+    backgroundImage:`url("${featureImage}")`, 
+  };
   return (
     <Layout>
       <SEO seoData={seoData} />
       <div className='serie-page' >
         <Breadcrumb pathElems={[{ path: path, nameLink: serieName }]} />
-        <div className='serie-feature-img' style={{backgroundImage:`url("${featureImage}")`, backgroundColor:color}}>
-          <h1 className='serie-name' style={{color: textColor}}>{serieName}</h1>
+        <div className='serie-feature-img' style={featureImageStyles}>
+          <div className='crystal'>
+            <h1 className='serie-name' >{serieName}</h1>
+          </div>
         </div>
-        <h2 style={styleHeadings}>{text.firstTitle}:</h2>
-        <div className='serie-description'>{metaDescription}</div>
-        <br />
-        <br />
-        <br />
-        <h2 style={styleHeadings}>{text.secondTitle}:</h2>
+        <h2 className='serie-title'>{text.firstTitle}:</h2>
+        <div className='serie-description upper-card-content'>{metaDescription}</div>
+        <h2 className='serie-title'>{text.secondTitle}:</h2>
         <div className="grids two-grids">
           {posts}
         </div>
@@ -75,8 +74,6 @@ export const pageQuery = graphql`
         metaDescription
         serieData {
           serieName
-          color
-          textColor
           featureImage
         }
       }

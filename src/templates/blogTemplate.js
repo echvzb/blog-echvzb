@@ -4,7 +4,8 @@ import Layout from "../components/layout";
 import SEO from "../components/SEO";
 import FacebookComments from "../components/facebookComments";
 import ShareButtons from "../components/shareButtons";
-import Breadcrumb from "../components/breadcrumb"
+import Breadcrumb from "../components/breadcrumb";
+import featureImageInsetBoxShadow from '../components/featureImgInsetBoxShadow';
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -22,7 +23,7 @@ export default function Template({
   pathElems = pathElems.map(elem => {
     return ({ path: elem[0], nameLink: elem[1] })
   });
-
+  document.documentElement.style.setProperty('--inner-shadow-thumb', featureImageInsetBoxShadow(frontmatter.serieData.color));
   const seoData = {
     title: `${frontmatter.title} - ${frontmatter.serieData.serieName} | ${siteMetadata.title}`,
     description: frontmatter.metaDescription,
@@ -31,12 +32,12 @@ export default function Template({
     author: frontmatter.author.authorName,
     keywords: siteMetadata.keywords
   }
-
+  console.log(frontmatter.serieData)
   return (
     <Layout>
       <SEO seoData={seoData} />
       <Breadcrumb pathElems={pathElems} />
-      <div className="post-thumbnail" style={{ backgroundImage: `url(${frontmatter.serieData.featureImage})` }}>
+      <div className="post-thumbnail" style={{ backgroundImage: `url(${frontmatter.serieData.featureImage})`}}>
         <h1 className="post-title">{frontmatter.title}</h1>
         <div className='author'>
           <img src={frontmatter.author.profilePicture} alt={frontmatter.author.authorName + ' picture.'} />
@@ -90,6 +91,7 @@ export const pageQuery = graphql`
         serieData {
           serieName
           featureImage
+          color
         }
       }
     }

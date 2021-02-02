@@ -60,6 +60,7 @@ export const pageQuery = graphql`
               serieName
               color
               textColor
+              featureImage
             }
           }
         }

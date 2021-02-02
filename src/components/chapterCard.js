@@ -1,22 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const ChapterLink = ({ post: { frontmatter: { path, title, chapter, metaDescription, author: { authorName } } }, lang, firstColor, secondColor, textColor }) => {
-    const authorColor = textColor === '#fff' ? "#DFDFDF" : "#202020";
-    const descriptionColor = textColor === '#fff' ? "#EFEFEF" : "#101010";
-
+const ChapterLink = ({ post: { frontmatter: { path, title, chapter, metaDescription, author: { authorName } } }, lang, }) => {
     return (
-        <article className="card" style={{background: `linear-gradient(145deg, ${firstColor}, ${secondColor})`}}>
+        <article className="card">
             <header>
-                <Link to={path} className="serie-link">
+                <Link to={path} className="post-link">
                     <h2 className="post-title">
-                        <div className='chapter-title' style={{color: textColor}}>
+                        <div className='chapter-title' >
                             {chapter + ". " + title}
                         </div>
-                        <div className='chapter-author' style={{color: authorColor}}>
+                        <div className='chapter-author' >
                             By:{" " + authorName}
                         </div>
-                        <div className='chapter-description' style={{color: descriptionColor}}>
+                        <div className='chapter-description' >
                             {metaDescription}
                         </div>
                     </h2>
