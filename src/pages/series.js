@@ -58,8 +58,6 @@ export const pageQuery = graphql`
             path
             serieData {
               serieName
-              color
-              textColor
               featureImage
             }
           }

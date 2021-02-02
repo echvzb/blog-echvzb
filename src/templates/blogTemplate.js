@@ -23,7 +23,6 @@ export default function Template({
   pathElems = pathElems.map(elem => {
     return ({ path: elem[0], nameLink: elem[1] })
   });
-  document.documentElement.style.setProperty('--inner-shadow-thumb', featureImageInsetBoxShadow(frontmatter.serieData.color));
   const seoData = {
     title: `${frontmatter.title} - ${frontmatter.serieData.serieName} | ${siteMetadata.title}`,
     description: frontmatter.metaDescription,
