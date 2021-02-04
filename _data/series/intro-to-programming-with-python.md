@@ -2,7 +2,7 @@
 serieIdentifier: intro to programming with python
 serieData:
   featureImage: /assets/intro-to-programming-serie.jpg
-  serieName: Intro to programming with Python
+  serieName: Intro to Programming with Python
   color: "#295939"
   textColor: "#fff"
 metaDescription: If you're a beginer in coding or you have no knowledge about
