@@ -5,6 +5,7 @@ serieData:
   color: none
   featureImage: /assets/intro-to-neuroscience-1.jpg
 metaDescription: on development
-path: ""
+path: /intro-to-neuroscience
 template: serie
 ---
+

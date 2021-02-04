@@ -1,10 +1,10 @@
 ---
 template: blogPost
-path: ""
+path: /intro-to-programming-with-python/the-art-of-programming
 author:
   authorName: Eduardo Chavez
-  personalWebsite: https://portfolio.echvzb.me
-  twitterUsername: "@echvzb"
+  personalWebsite: 'https://portfolio.echvzb.me'
+  twitterUsername: '@echvzb'
   profilePicture: /assets/author.jpg
 date: 2021-02-03T22:40:01.208Z
 title: The Art of Programming
@@ -12,10 +12,11 @@ chapter: 0
 serieData:
   featureImage: /assets/intro-to-programming-serie.jpg
   serieName: Intro to Programming with Python
-  color: "#295939"
-  textColor: "#fff"
-metaDescription: Programming involves different features of some disciplinary
-  fields which are mathematics, engineering, and science.
+  color: '#295939'
+  textColor: '#fff'
+metaDescription: >-
+  Programming involves different features of some disciplinary fields which are
+  mathematics, engineering, and science.
 seoImg: /assets/the-art-of-programming.jpg
 ---
 Programming involves in a direct way different features of some disciplinary fields which are mathematics, engineering, and science.

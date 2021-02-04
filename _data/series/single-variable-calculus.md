@@ -5,6 +5,7 @@ serieData:
   color: none
   featureImage: /assets/simple-variable-calculus.jpg
 metaDescription: On development
-path: ""
+path: /single-variable-calculus
 template: serie
 ---
+

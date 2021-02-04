@@ -13,6 +13,7 @@ export default function HTML(props) {
         />
         <script data-ad-client="ca-pub-9824850955984281" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossOrigin="anonymous" />
+        <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="echvzb" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
