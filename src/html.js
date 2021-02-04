@@ -15,6 +15,7 @@ export default function HTML(props) {
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossOrigin="anonymous" />
         <script
           data-name="BMC-Widget"
+          data-cfasync="false"
           src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
           data-id="echvzb"
           data-description="Support me on Buy me a coffee!"
