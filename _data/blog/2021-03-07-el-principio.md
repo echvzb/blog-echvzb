@@ -7,7 +7,7 @@ author:
   twitterUsername: "@echvzb"
   profilePicture: /assets/author.jpg
 date: 2021-03-07T03:23:31.344Z
-title: El principio.
+title: El principio
 chapter: 0
 serieData:
   serieName: Introducción a la programación
