@@ -5,7 +5,6 @@ import SEO from "../components/SEO";
 import FacebookComments from "../components/facebookComments";
 import ShareButtons from "../components/shareButtons";
 import Breadcrumb from "../components/breadcrumb";
-import featureImageInsetBoxShadow from '../components/featureImgInsetBoxShadow';
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -31,7 +30,6 @@ export default function Template({
     author: frontmatter.author.authorName,
     keywords: siteMetadata.keywords
   }
-  console.log(frontmatter.serieData)
   return (
     <Layout>
       <SEO seoData={seoData} />

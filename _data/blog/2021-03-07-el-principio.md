@@ -1,10 +1,10 @@
 ---
 template: blogPost
-path: ""
+path: /introducci-n-a-la-programaci-n/el-principio
 author:
   authorName: Eduardo Chávez Barreto
-  personalWebsite: https://portfolio.echvzb.me
-  twitterUsername: "@echvzb"
+  personalWebsite: 'https://portfolio.echvzb.me'
+  twitterUsername: '@echvzb'
   profilePicture: /assets/author.jpg
 date: 2021-03-07T03:23:31.344Z
 title: El principio
@@ -12,13 +12,13 @@ chapter: 0
 serieData:
   serieName: Introducción a la programación
   featureImage: /assets/intro-a-la-computacion.jpg
-metaDescription: "En los llamados países en vías de desarrollo, culturalmente
-  existe una semántica para cuestiones tecnológicas. En informática,
-  popularmente se tiene una connotación diferente a lo que en realidad es, más
-  enfocado al tema de ofimática. Esa es nuestra realidad tecnológica que
-  experimentan buena parte de los países que no desarrollan tecnología, se cree
-  que mayormente la computación consiste en editar hojas de cálculo o escribir
-  documentos. "
+metaDescription: >-
+  En los llamados países en vías de desarrollo, culturalmente existe una
+  semántica para cuestiones tecnológicas. En informática, popularmente se tiene
+  una connotación diferente a lo que en realidad es, más enfocado al tema de
+  ofimática. Esa es nuestra realidad tecnológica que experimentan buena parte de
+  los países que no desarrollan tecnología, se cree que mayormente la
+  computación consiste en editar hojas de cálculo o escribir documentos. 
 seoImg: /assets/el-principio.jpg
 ---
 En los llamados países en vías de desarrollo (subdesarrollados), culturalmente existe una semántica para cuestiones tecnológicas. En informática, popularmente se tiene una connotación diferente a lo que en realidad es, más enfocado al tema de ofimática. 

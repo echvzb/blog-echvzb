@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import Layout from "../components/layout"
 import { Link, useStaticQuery, graphql } from "gatsby";
 
-export default () => {
+const ErrorPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -16,14 +16,12 @@ export default () => {
     `
   )
   const lang = data.site.siteMetadata.language,
-      isEnUs = lang === 'en-US', 
-      title = isEnUs ? 'Page not found' : 'Página no encontrada',
-      description = isEnUs ? 'You are on a wrong page. For more posts, visit ' : 'Estás en una página erronea. Para más publicaciones, visita ',
-      linkText = isEnUs ? 'Home' : 'Inicio';
+     	isEnUs = lang === 'en-US',
+	title = isEnUs ? 'Page not found' : 'Página no encontrada',
+      	description = isEnUs ? 'You are on a wrong page. For more posts, visit ' : 'Estás en una página erronea. Para más publicaciones, visita ',
+      	linkText = isEnUs ? 'Home' : 'Inicio';
 
-  console.log(data)
   return (
-    
     <Layout>
       <Helmet>
         <title>{title}</title>
@@ -61,3 +59,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default ErrorPage;
