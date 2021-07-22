@@ -246,8 +246,7 @@ a {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.fab,
-.fas {
+.icon {
   font-size: 1.4rem;
   color: var(--background);
 }
@@ -255,12 +254,9 @@ a {
   margin-right: 0.5rem;
   font-size: 1rem !important;
 }
-.fas.fa-chevron-right {
+.bi-chevron-right {
   color: var(--secondary-color) !important;
-  font-size: 1rem !important;
-}
-.fas.fa-home {
-  color: var(--primary-color) !important;
+  font-size: 1.2rem !important;
 }
 .breadcrumb {
   display: flex;
