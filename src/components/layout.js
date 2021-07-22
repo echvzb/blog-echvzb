@@ -30,7 +30,7 @@ export default ({ children }) => {
       </header>
       {children}
       <footer className="site-footer">
-        <p>Made with <span role='img' aria-label="heart">&#10084;&#65039;</span> by &copy; {new Date().getFullYear()} <a href='https://echvzb.me'>echvzb</a></p>
+        <p>Made with <span role='img' aria-label="heart">&#10084;&#65039;</span> by &copy;{new Date().getFullYear()} <a href='https://thaunze.me'>Thaunze</a></p>
       </footer>
     </div>
   )

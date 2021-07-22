@@ -12,37 +12,37 @@ export default ({ url, shareTxt }) =>
                 url={url}
                 className={shareBtn}
             >
-                <i class="fab fa-facebook-f" />
+                <i className="fab fa-facebook-f" />
             </FacebookShareButton>
             <TelegramShareButton
                 url={url}
                 className={shareBtn}
             >
-                <i class="fab fa-telegram-plane" />
+                <i className="fab fa-telegram-plane" />
             </TelegramShareButton>
             <TwitterShareButton
                 url={url}
                 className={shareBtn}
             >
-                <i class="fab fa-twitter" />
+                <i className="fab fa-twitter" />
             </TwitterShareButton>
             <WhatsappShareButton
                 url={url}
                 className={shareBtn}
             >
-                <i class="fab fa-whatsapp" />
+                <i className="fab fa-whatsapp" />
             </WhatsappShareButton>
             <EmailShareButton
                 url={url}
                 className={shareBtn}
             >
-                <i class="fas fa-envelope" />
+                <i className="fas fa-envelope" />
             </EmailShareButton>
             <VKShareButton
                 url={url}
                 className={shareBtn}
             >
-                <i class="fab fa-vk" />
+                <i className="fab fa-vk" />
             </VKShareButton>
         </div>
     </div>
