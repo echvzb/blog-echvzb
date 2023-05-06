@@ -1,23 +1,13 @@
 ---
-template: blogPost
-path: /programaci-n-c-c/hello-c
-author:
-  authorName: Eduardo Chávez Barreto
-  personalWebsite: 'https://portfolio.echvzb.me'
-  twitterUsername: '@echvzb'
-  profilePicture: /assets/author.jpg
-date: 2021-03-17T04:24:36.679Z
-title: 'Hello, C++!'
-chapter: 0
-serieData:
-  serieName: Programación C/C++
-  featureImage: /assets/c-programming.jpg
-metaDescription: >-
+title: Introducción a C++
+excerpt: >-
   C++ es un lenguaje de programación de alto nivel (high-level language). C++ es
   un lenguje con la capacidad de tener acceso a funcionalidades de bajo nivel.
   C++ puede ser compilado por casi cualquier computadora. 
-seoImg: /assets/hello-c-seo.jpg
+coverImage: /assets/img/post/c-programming.jpg
+date: "2021-03-17T04:24:36.679Z"
 ---
+
 Utilizamos la programación para dar instrucciones a una computadora, con el fin de realizar una tarea o función. Hoy en día escuchamos que existen diversos lenguajes de programación. Sin embargo, cada uno tiene su identidad, características que lo hacen diferente de cualquier otro lenguaje de programación.
 
 ## Contenido.
@@ -44,7 +34,6 @@ Generalmente, C++ es usado para programas que requieran velocidad de procesamien
 
 Asimismo, C++ es comúnmente utilizado en la programación competitiva, o en inglés _competitive programming_. Como las competencias: IOI (International Olympiad in Informatics), ICPC (International Collegiate Programming Contest), entre otras. Debido a las particularidades del lenguaje ya mencionadas.
 
-
 <div id="key-feat"></div>
 
 ## Características clave de C++.
@@ -55,7 +44,7 @@ Asimismo, C++ es comúnmente utilizado en la programación competitiva, o en ing
 
 - **Conciso:** C++ nos permite expresar conocimiento imperativo con instrucciones concisas, en otros términos, palabras clave.
 
-- **Lenguaje multiparadigma:** Cuenta con los paradigmas de la programación más comunes como: genérico, de procedimiento, orientado a objetos, entre otros. 
+- **Lenguaje multiparadigma:** Cuenta con los paradigmas de la programación más comunes como: genérico, de procedimiento, orientado a objetos, entre otros.
 
 <div id="dev-env"></div>
 
@@ -65,10 +54,10 @@ Para poder desarrollar nuestros programas de C++, necesitamos herramientas para 
 
 Personalmente recomiendo dos opciones de IDE:
 
-- [**Code::Blocks**](https://www.codeblocks.org/): Code Blocks es un IDE gratuito que se puede instalar en Windows, Linux o Mac. Una consideración importante es que se debe tener un compilador instalado: 
-	- **Windows**: MinGW.
-	- **Linux**: GNU C++ Compiler (GCC).
-	- **Mac OS**: La forma más sencilla de instalar el compilador en Mac es instalando Xcode de Apple, el cual viene con GCC.
+- [**Code::Blocks**](https://www.codeblocks.org/): Code Blocks es un IDE gratuito que se puede instalar en Windows, Linux o Mac. Una consideración importante es que se debe tener un compilador instalado:
+  - **Windows**: MinGW.
+  - **Linux**: GNU C++ Compiler (GCC).
+  - **Mac OS**: La forma más sencilla de instalar el compilador en Mac es instalando Xcode de Apple, el cual viene con GCC.
 - [**Replit**](https://replit.com): a comparación con el anterior IDE, replit es un IDE web (in-browser IDE); el cual, solo necesitamos registrarnos (puedes vincular tu cuenta de GitHub) para poder empezar a desarrollar programas en más de 50 lenguajes de programación. No necesita instalación.
 
 En mi caso, utilizo el sistema operativo Linux, distribución Ubuntu. Por lo que mi compilador es GCC. Además, mi editor de código es GNU NANO (integrado en Linux).
@@ -91,4 +80,3 @@ int main()
     return 0;
 }
 ```
-

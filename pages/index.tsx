@@ -18,7 +18,7 @@ export default function Index({ allPosts }: Props) {
     <>
       <Layout>
         <Head>
-          <title>{`Next.js Blog Example with`}</title>
+          <title>Thaunze Blog</title>
         </Head>
         <Container>
           <Intro />
@@ -27,7 +27,6 @@ export default function Index({ allPosts }: Props) {
               title={heroPost.title}
               coverImage={heroPost.coverImage}
               date={heroPost.date}
-              author={heroPost.author}
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
             />
